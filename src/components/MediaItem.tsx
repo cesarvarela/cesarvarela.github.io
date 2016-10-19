@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export interface GamesItemProps 
+export interface MediaItemProps 
 {
     title?: string,
     img?: string,
@@ -11,7 +11,7 @@ export interface GamesItemProps
 
 let context = require.context("../img/thumbs", true, /^\.\/.*\.png$/)
 
-export class GamesItem extends React.Component<GamesItemProps, {}> {
+export class MediaItem extends React.Component<MediaItemProps, {}> {
 
     render() {
         return <div className="item clearfix">

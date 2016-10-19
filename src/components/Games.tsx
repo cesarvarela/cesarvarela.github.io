@@ -1,10 +1,11 @@
 import * as React from 'react'
-import { GamesItem, GamesItemProps } from './GameItem'
+import { MediaItem, MediaItemProps } from './MediaItem'
+import { MediaList } from './MediaList'
 
 export class Games extends React.Component<{}, {}> {
 
 	render() {
-		let games: GamesItemProps[] =
+		let games: MediaItemProps[] =
 			[
 				{
 					img: "./thumb-totems.png",
@@ -38,10 +39,6 @@ export class Games extends React.Component<{}, {}> {
 				}
 			]
 
-		let items = games.map((item, index) => {
-			return <GamesItem key={index} title={item.title} description={item.description} img={item.img} link={item.link} />
-		})
-
 		return <section id="games">
 			<p className="pre-heading">After all, life is a game</p>
 			<h2 className="line-heading">Games</h2>
@@ -49,9 +46,7 @@ export class Games extends React.Component<{}, {}> {
 				We don't stop playing because we grow old; we grow old because we stop playing. (George Bernard Shaw)
 			</p>
 			<div className="content">
-				<div className="items-list">
-					{items}
-				</div>
+				<MediaList items={games} />
 			</div>
 		</section>
 	}
