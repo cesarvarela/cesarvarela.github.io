@@ -21,7 +21,7 @@ module.exports = {
             // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
             { test: /\.tsx?$/, loader: "ts-loader" },
             { test: /\.scss$/, loaders: ['style', 'css', 'sass'] },
-            { test: /\.(jpg|png)$/, loader: 'url' }
+            { test: /\.(jpg|png|gif)$/, loader: 'url' }
         ],
 
         preLoaders: [

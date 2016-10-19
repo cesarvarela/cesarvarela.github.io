@@ -11,7 +11,7 @@ export class Contact extends React.Component<{}, {}> {
 			<div className="content">
 				<div className="row content-inner">
 					<div className="vCard">
-						<img src="img/MECard.gif" alt="qr con datos de contacto" />
+						<img src={ require("../img/MECard.gif") } alt="qr con datos de contacto" />
 						<p>
 							Load this MECard with my contact info to your smartphone.
 						</p>
