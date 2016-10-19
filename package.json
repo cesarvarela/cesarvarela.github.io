@@ -15,9 +15,14 @@
     "react-dom": "^15.3.2"
   },
   "devDependencies": {
+    "css-loader": "^0.25.0",
+    "node-sass": "^3.10.1",
+    "sass-loader": "^4.0.2",
     "source-map-loader": "^0.1.5",
+    "style-loader": "^0.13.1",
     "ts-loader": "^0.9.4",
     "typescript": "^2.0.3",
+    "url-loader": "^0.5.7",
     "webpack": "^1.13.2"
   }
 }
