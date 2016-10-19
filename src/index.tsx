@@ -4,6 +4,3 @@ import * as ReactDOM from 'react-dom'
 import { Hello } from "./components/Hello"
 
 ReactDOM.render( <Hello compiler="typescript" framework="react" />, document.getElementById("example"))
-
-
-
