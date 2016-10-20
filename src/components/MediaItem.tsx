@@ -16,7 +16,7 @@ export class MediaItem extends React.Component<MediaItemProps, {}> {
     render() {
         return <div className="item clearfix">
             <div className="thumb">
-                <img src={ context(this.props.img) } />
+                <img src={ context<string>(this.props.img) } />
             </div>
             <div className="data">
                 <h4>{ this.props.title }</h4>
