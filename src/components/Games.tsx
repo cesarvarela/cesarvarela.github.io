@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { MediaItem, MediaItemProps } from './MediaItem'
 import { MediaList } from './MediaList'
+import { Section } from './Section'
 
 export class Games extends React.Component<{}, {}> {
 
@@ -39,15 +40,8 @@ export class Games extends React.Component<{}, {}> {
 				}
 			]
 
-		return <section id="games">
-			<p className="pre-heading">After all, life is a game</p>
-			<h2 className="line-heading">Games</h2>
-			<p className="sub-line-heading">
-				We don't stop playing because we grow old; we grow old because we stop playing. (George Bernard Shaw)
-			</p>
-			<div className="content">
+		return <Section id="games" preHeading="After all, life is a game" heading="Games" postHeading="We don't stop playing because we grow old; we grow old because we stop playing. (George Bernard Shaw)">
 				<MediaList items={games} />
-			</div>
-		</section>
+		</Section>
 	}
 }

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { MediaItemProps } from './MediaItem'
 import { MediaList } from './MediaList'
+import { Section } from './Section'
 
 export class Applications extends React.Component<{}, {}> {
 
@@ -17,19 +18,8 @@ export class Applications extends React.Component<{}, {}> {
 				}
 			]
 
-		return <section id="apps">
-			<p className="pre-heading"></p>
-			<h2 className="line-heading">Applications</h2>
-			<p className="sub-line-heading">
-				Making your life easier since 1984.
-			</p>
-
-			<div className="content">
-				<div className="row content-inner">
-					<MediaList items={apps} />
-				</div>
-			</div>
-
-		</section>
+		return <Section id="apps" heading="Applications" postHeading="Making your life easier since 1984.">
+			<MediaList items={apps} />
+		</Section>
 	}
 }
