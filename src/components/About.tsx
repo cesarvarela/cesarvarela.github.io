@@ -1,4 +1,62 @@
 import * as React from 'react'
+import {SkillItem, SkillItemProps} from './SkillItem'
+
+let languages:SkillItemProps[] = 
+[
+    {
+        name: "Javascript"
+    },
+    {
+        name: "Typescript"
+    },
+    {
+        name: "Swift"
+    },
+    {
+        name: "C#"
+    },
+    {
+        name: "ActionScript 3"
+    },
+    {
+        name: "PHP"
+    },
+    {
+        name: "GO"
+    },
+]
+
+let frameworks:SkillItemProps[] = 
+[
+    {
+        name: "React"
+    },
+    {
+        name: "Angular"
+    },
+    {
+        name: "Express"
+    },
+]
+
+let platforms:SkillItemProps[] = 
+[
+    {
+        name: "Node.js"
+    },
+    {
+        name: "iOS/Xcode"
+    },
+    {
+        name: ".NET"
+    },
+    {
+        name: "Unity 3D"
+    },
+    {
+        name: "LAMP"
+    }
+]
 
 export class About extends React.Component<{}, {}> {
 
@@ -21,35 +79,35 @@ export class About extends React.Component<{}, {}> {
                         <div>
                             <b>Languages</b>
                             <ul>
-                                <li>Javascript</li>
-                                <li>C#</li>
-                                <li>ActionScript 3</li>
-                                <li>HTML5/CSS</li>
-                                <li>PHP</li>
-                                <li>SQL</li>
-                                <li>Java</li>
+                                {
+                                    languages.map((item) => 
+                                    {
+                                        return <SkillItem name={item.name} />
+                                    })
+                                }
                             </ul>
                         </div>
                         <div>
                             <b>Frameworks/Libraries</b>
                             <ul>
-                                <li>ASP.NET MVC 4</li>
-                                <li>Jquery</li>
-                                <li>Backbone</li>
-                                <li>Knockout</li>
-                                <li>Drupal</li>
-                                <li>Sencha Touch</li>
-                                <li>Apache Cordova (ex Phonegap)</li>
+                                {
+                                    frameworks.map((item) => 
+                                    {
+                                        return <SkillItem name={item.name} />
+                                    })
+                                }
                             </ul>
                         </div>
 
                         <div>
                             <b>Development stacks/Platforms</b>
                             <ul>
-                                <li>ASP.NET</li>
-                                <li>LAMP</li>
-                                <li>Unity3d</li>
-                                <li>Adobe Flash</li>
+                                {
+                                    platforms.map((item) => 
+                                    {
+                                        return <SkillItem name={item.name} />
+                                    })
+                                }
                             </ul>
                         </div>
                     </div>
