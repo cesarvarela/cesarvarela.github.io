@@ -183,26 +183,6 @@ header.blog-index, header.blog-post
   }
 }
 
-
-
-.line-heading
-{
-  @include title-font;
-  font-size: 32px;
-  margin: 10px 0 0 0;
-}
-
-.sub-line-heading
-{
-  text-align: center;
-  width: 80%;
-  margin: 30px auto 0;
-  font-size: 18px;
-  font-style: italic;
-  font-family: Georgia, serif;
-}
-
-
 section
 {
   background: #000;
@@ -217,6 +197,23 @@ section
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+  }
+
+  .line-heading
+  {
+    @include title-font;
+    font-size: 32px;
+    margin: 10px 0 0 0;
+  }
+
+  .sub-line-heading
+  {
+    text-align: center;
+    width: 80%;
+    margin: 30px auto 0;
+    font-size: 18px;
+    font-style: italic;
+    font-family: Georgia, serif;
   }
 
   .content
@@ -323,7 +320,6 @@ section
 section#head
 {  
   background: $background-light;
-
   h1
   {
     @include title-font;
@@ -370,13 +366,12 @@ section#contact
 
 section#about
 {
-  .content
-  {
     .skills
     {
       margin: 0 auto;
       max-width: 720px;
     }
+
     .socialize
     {
       background: #181818;
@@ -399,10 +394,36 @@ section#about
           font-size: 32px;  
         }
       }
-
+      .social-links
+      {
+        list-style: none;
+        margin: 20px 0 0 0;
+        text-align: center;
+        padding: 0;
+        li
+        {
+          margin: 0 20px 0 0;
+          display: inline-block;
+          a
+          {
+            display: inline-block;
+            &:before
+            {
+              font-family: "fontello";
+              font-size: 32px;
+            }
+            &:after
+            {
+              content: none;
+            }
+          }
+          &.github a:before { content: '\e807';}
+          &.linked-in a:before { content: '\e806';}
+          &.flickr a:before { content: '\e802';}
+          &.last-fm a:before { content: '\e805';}
+        }
+      }
     }
-  }
-
 }
 
 /* footer */
@@ -427,39 +448,6 @@ footer
     {
       display: inline-block;
     }
-  }
-}
-
-
-/* social links */
-
-.social-links
-{
-  list-style: none;
-  margin: 20px 0 0 0;
-  text-align: center;
-  padding: 0;
-  li
-  {
-    margin: 0 20px 0 0;
-    display: inline-block;
-    a
-    {
-      display: inline-block;
-      &:before
-      {
-        font-family: "fontello";
-        font-size: 32px;
-      }
-      &:after
-      {
-        content: none;
-      }
-    }
-    &.github a:before { content: '\e807';}
-    &.linked-in a:before { content: '\e806';}
-    &.flickr a:before { content: '\e802';}
-    &.last-fm a:before { content: '\e805';}
   }
 }
 
@@ -512,160 +500,6 @@ footer
     width: 100%;
   }
 }
-
-
-/* Post */
-
-.post
-{
-  & > h1, & > h2
-  {
-    text-align: center;
-    max-width: 720px;
-    margin: 20px auto 0;
-    @include title-font;
-    font-size: 32px;
-    position: relative;
-    
-/*     &:after, &:before
-    {
-      content: '\e809';
-      font-size: 12px;
-      font-family: "fontello";
-      vertical-align: middle;
-    }
-    
-    &:after
-    {
-      margin: 0 0 0 15px;
-    }
-    
-    &:before
-    {
-      margin: 0 15px 0 0;
-    } */
-  }
-  
-  & > ul
-  {
-    max-width: 720px;
-    margin: 10px auto 0;
-    list-style: none;
-    text-align: center;
-    
-    li
-    {
-      display: inline-block;
-      margin: 0 5px 0 0;
-
-      &:after
-      {
-        content: '\e809';
-        font-family: "fontello";
-        font-size: 8px;
-        vertical-align: middle;
-        margin: 0 0 0 5px;
-      }
-      
-      &:last-child:after
-      {
-        display: inline-block;
-        content: none;
-      }
-      
-      a
-      {
-        color: #333;  
-      }
-    }
-  }
-
-  .date
-  {
-    display: block;
-    text-align: center;
-    max-width: 720px;
-    margin: auto;
-    font-size: 12px;
-    @include title-font;
-  }
-  
-  .content
-  {
-    background: $background-dark;
-    margin: 40px 0 0 0;
-    padding: 30px 0 30px 0;
-    color: #DBDBDB;
-
-    .content-inner
-    {
-      max-width: 720px;
-      margin: auto;
-    }
-  }
-}
-
-.post-excerpt
-{
-  @extend .post;
-  margin: 30px 0 0 0;
-  
-  & > h2
-  {
-    margin: 0 auto 0; 
-  }
-  
-  .content
-  {
-    margin: 10px 0 0 0;
-  }
-
-  .read-more
-  {
-    color: $font-color;
-    max-width: 720px;
-    margin: 0 auto;
-    display: block;
-
-    &:after
-    {
-      content: '\e80A';
-      font-family: "fontello";
-      vertical-align: middle;
-      margin: 0 0 0 5px;
-    }
-  }
-}
-
-
-#archive
-{
-  max-width: 720px;
-  margin: auto; 
-  
-  h2
-  {
-     @include title-font;
-  }
-}
-
-#related-posts
-{
-  max-width: 720px;
-  margin: auto; 
-  h3
-  {
-    text-align: center;
-    @include title-font;
-  }
-}
-
-#disqus_thread
-{
-  max-width: 720px;
-  margin: auto; 
-}
-
 
 /* footer */
 
