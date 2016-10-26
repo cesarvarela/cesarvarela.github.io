@@ -1,4 +1,4 @@
-@import "mixins";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
 
 $link-color: #CC1100;
 $title-font: 'Montserrat', sans-serif;
@@ -29,11 +29,6 @@ $font-color: #eaeaea;
 @mixin paragraph-font
 {
   font-family: $paragraph-font;
-}
-
-*, *:before, *:after 
-{
-  @include box-sizing(border-box);
 }
 
 body
