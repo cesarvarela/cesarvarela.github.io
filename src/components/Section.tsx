@@ -11,6 +11,7 @@ interface SectionProps
 export class Section extends React.Component<SectionProps, {}> {
 
     render() {
+
         return <section id={this.props.id}>
             <div className="container-fluid">
                 <p className="pre-heading">{this.props.preHeading}</p>

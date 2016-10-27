@@ -67,8 +67,8 @@ export class About extends React.Component<{}, {}> {
                 <h4>Skills</h4>
                 <p>Analysis, design and software development.</p>
                 <h4>Technologies</h4>
-                <div>
-                    <div>
+                <div className="row">
+                    <div className="col-sm-4">
                         <b>Languages</b>
                         <ul>
                             {
@@ -78,7 +78,7 @@ export class About extends React.Component<{}, {}> {
                             }
                         </ul>
                     </div>
-                    <div>
+                    <div className="col-sm-4">
                         <b>Frameworks/Libraries</b>
                         <ul>
                             {
@@ -88,8 +88,7 @@ export class About extends React.Component<{}, {}> {
                             }
                         </ul>
                     </div>
-
-                    <div>
+                    <div className="col-sm-4">
                         <b>Development stacks/Platforms</b>
                         <ul>
                             {

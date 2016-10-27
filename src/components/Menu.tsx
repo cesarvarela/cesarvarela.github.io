@@ -36,11 +36,6 @@ export class Menu extends React.Component<{}, State> {
     }
 
     componentDidMount() {
-
-        this.windowTop = $(window).scrollTop()
-        this.menuTop = $(this.menuDom).offset().top
-        this.menuHeight = $(this.menuDom).height()
-
         window.addEventListener('scroll', this.handleScroll.bind(this))
     }
 
@@ -51,9 +46,15 @@ export class Menu extends React.Component<{}, State> {
     handleScroll() {
 
         this.windowTop = $(window).scrollTop();
+        this.menuHeight = $(this.menuDom).height()
 
-        if (this.windowTop - this.menuHeight > this.menuTop) {
-            this.setState({ sticky: true })
+        if(!this.state.sticky)
+        {
+            this.menuTop = $(this.menuDom).offset().top
+        }
+
+        if (this.windowTop > this.menuTop) {
+            this.setState({ sticky: true })            
         }
         else {
             this.setState({ sticky: false })
@@ -62,7 +63,7 @@ export class Menu extends React.Component<{}, State> {
         let last: MenuItem;
 
         this.state.menu.forEach((item) => {
-            if (this.windowTop > $(item.href).offset().top) {
+            if (this.windowTop + this.menuHeight > $(item.href).offset().top) {
                 last = item;
             }
         })
@@ -78,14 +79,14 @@ export class Menu extends React.Component<{}, State> {
 
         let classes = classnames("main", { sticky: this.state.sticky });
         let items = this.state.menu.map((item) => {
-            return <li key={item.href} className={classnames({ active: item.active })}><a href={item.href}>{item.text}</a></li>
+            return <li key={item.href} className={classnames('list-inline-item', { active: item.active })}><a href={item.href}>{item.text}</a></li>
         })
 
         return <section id="menu" onScroll={this.handleScroll}>
             <nav className={classes} ref={(c) => this.menuDom = c}>
-                <ul>
+                <ul className="list-inline">
                     {items}
-                </ul>
+                </ul>                 
             </nav>
         </section>
     }

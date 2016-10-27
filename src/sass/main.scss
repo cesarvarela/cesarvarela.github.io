@@ -8,6 +8,7 @@ $paragraph-font: lato, sans-serif;
 $background-light: #fff;
 $background-dark: #333;
 $font-color: #eaeaea;
+$text-dark: #333;
 
 @mixin float
 {
@@ -82,45 +83,6 @@ hr.dot
   clear: both;
 }
 
-
-img.po
-{
-  margin: 0 auto;
-  display: block;
-  width: 200px;
-  height: 200px;
-}
-
-.po-quote
-{
-  font-family: Georgia, serif;
-  font-size: 28px;
-  width: 60%;
-  max-width: 600px;
-  margin: 40px auto 0;
-  position: relative;
-  text-align: center;
-  line-height: 35px;
-
-  &:before
-  {
-    content: "\201C";
-    font-size: 150px;
-    position: absolute;
-    left: -100px;
-    top: 20%;
-  }
-
-  &:after
-  {
-    content: "\201D";
-    font-size: 150px;
-    position: absolute;
-    right: -100px;
-    top: 80%;
-  }
-}
-
 nav.main
 {
   margin: 0;
@@ -129,16 +91,14 @@ nav.main
   text-transform: uppercase;
   background: transparent;
   transition: background 0.2s ease-out;
+
   ul
   {
-    list-style: none;
-    margin: 0 auto;
-    display: inline-block;
-    width: 80%;
+    margin: 0;
     li
     {
-      display: inline-block;
-      padding: 10px 20px;      
+      font-size: 1rem;
+      padding: 10px 5px;      
       a
       {
         color: #111;
@@ -152,7 +112,7 @@ nav.main
     z-index: 9999;
     width: 100%;
     top: 0;
-    background: #333;
+    background: $background-dark;
     transition: background 0.2s ease-out;
     -webkit-transform: translate3d(0, 0, 0);
 
@@ -160,7 +120,6 @@ nav.main
     {
       color: #fafafa;
       transition: color 0.2s ease-out;
-
     }
 
     ul li.active
@@ -174,72 +133,54 @@ nav.main
   }
 }
 
-
-header.blog-index, header.blog-post
-{
-  @include title-font;
-  
-  a
-  {
-    color: #333;  
-  }
-}
-
 section
 {
   background: #000;
 
   .container-fluid {
-    background: $background-light; 
+    background: $background-light;
+    padding: 20px 0;
+
+    .pre-heading
+    {
+      text-align: center;
+      font-size: 16px;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+    }
+
+    .line-heading
+    {
+      @include title-font;
+      font-size: 32px;
+      margin: 10px 0 0 0;
+    }
+
+    .sub-line-heading
+    {
+      text-align: center;
+      width: 80%;
+      margin: 30px auto 0;
+      font-size: 18px;
+      font-style: italic;
+      font-family: Georgia, serif;
+    } 
   }
 
-  .pre-heading
+  .container
   {
-    text-align: center;
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-  }
-
-  .line-heading
-  {
-    @include title-font;
-    font-size: 32px;
-    margin: 10px 0 0 0;
-  }
-
-  .sub-line-heading
-  {
-    text-align: center;
-    width: 80%;
-    margin: 30px auto 0;
-    font-size: 18px;
-    font-style: italic;
-    font-family: Georgia, serif;
-  }
-
-  .content
-  {
-    margin: 40px 0 0 0;
-    padding: 30px 0 30px 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
     color: #DBDBDB;
-    background: #353333;
     b
     {
       color: #fff;
     }
-
     h4
     {
       color: #fff;
       font-family: 'Montserrat', sans-serif;
       text-transform: uppercase;
-    }
-
-    .items-list
-    {
-      max-width: 720px;
-      margin: auto;
     }
   }
 }
@@ -322,10 +263,71 @@ section
 section#head
 {  
   background: $background-light;
+
+  .container {
+    color: $text-dark;
+  }
+  
+  padding: 40px 0 0;
   h1
   {
-    @include title-font;
+    @include title-font; 
     margin: 0 auto 20px;
+    font-size: 1.8rem;
+    @include media(">sm") {
+      font-size: 2.2rem;
+    }
+  }
+
+  img.po
+  {
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+    height: 200px;
+  }
+
+  .po-quote
+  {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    position: relative;
+    text-align: center;
+    line-height: 35px;
+    margin:  0 auto;
+
+    @include media(">md") {
+      max-width: 600px; 
+      margin: 30px auto 0; 
+    }
+
+    &:before
+    {
+      content: "\201C";
+      font-size: 100px;
+      display: block;
+      padding: 60px 0 0;
+      @include media(">md") {
+        font-size: 140px;
+        position: absolute;
+        left: -80px;
+        top: -40%;
+      }      
+    }
+
+    &:after
+    {
+      content: "\201D";
+      font-size: 100px;
+      display: block;
+      padding: 40px 0 0;
+      @include media(">md") {
+        font-size: 140px;
+        position: absolute;
+        right: -80px;
+        top: 40%;
+      }
+    }
   }
 }
 
@@ -335,7 +337,6 @@ section#head
 section#menu
 {
   background: $background-light;
-  min-height: 55px;
 }
 
 
@@ -368,12 +369,6 @@ section#contact
 
 section#about
 {
-    .skills
-    {
-      margin: 0 auto;
-      max-width: 720px;
-    }
-
     .socialize
     {
       background: #181818;
