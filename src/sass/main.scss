@@ -1,4 +1,6 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
+$breakpoints: $grid-breakpoints;
+@import "node_modules/include-media/dist/include-media";
 
 $link-color: #CC1100;
 $title-font: 'Montserrat', sans-serif;
