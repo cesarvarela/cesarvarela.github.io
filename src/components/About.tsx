@@ -70,7 +70,7 @@ export class About extends React.Component<{}, {}> {
                 <div className="row">
                     <div className="col-sm-4">
                         <b>Languages</b>
-                        <ul>
+                        <ul className="list">
                             {
                                 languages.map((item) => {
                                     return <SkillItem name={item.name} />
@@ -89,7 +89,7 @@ export class About extends React.Component<{}, {}> {
                         </ul>
                     </div>
                     <div className="col-sm-4">
-                        <b>Development stacks/Platforms</b>
+                        <b>Stacks/Platforms</b>
                         <ul>
                             {
                                 platforms.map((item) => {

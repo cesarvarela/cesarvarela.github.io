@@ -12,6 +12,7 @@ export class App extends React.Component<{}, {}> {
         return  <div>
                     <Header />
                     <Menu />
+                    <hr className="dot" />
                     <Games />
                     <Applications />
                     <Contact />

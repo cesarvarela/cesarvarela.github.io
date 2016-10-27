@@ -136,6 +136,7 @@ nav.main
 section
 {
   background: #000;
+  margin-top: 40px;
 
   .container-fluid {
     background: $background-light;
@@ -164,7 +165,11 @@ section
       font-size: 18px;
       font-style: italic;
       font-family: Georgia, serif;
-    } 
+    }
+
+    .pre-heading:empty, .line-heading:empty, .sub-line-heading:empty {
+      display: none;
+    }
   }
 
   .container
@@ -263,12 +268,16 @@ section
 section#head
 {  
   background: $background-light;
+  
+  .container-fluid {
+    display: none;
+  }
 
   .container {
     color: $text-dark;
+    padding-bottom: 0px;
   }
   
-  padding: 40px 0 0;
   h1
   {
     @include title-font; 
@@ -337,6 +346,7 @@ section#head
 section#menu
 {
   background: $background-light;
+  margin: 40px 0 40px;
 }
 
 

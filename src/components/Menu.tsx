@@ -15,6 +15,7 @@ interface State {
 
 export class Menu extends React.Component<{}, State> {
 
+    sectionDom: HTMLElement;
     menuDom: HTMLElement;
     menuTop: number;
     menuHeight: number;
@@ -47,6 +48,7 @@ export class Menu extends React.Component<{}, State> {
 
         this.windowTop = $(window).scrollTop();
         this.menuHeight = $(this.menuDom).height()
+        $(this.sectionDom).height(this.menuHeight);
 
         if(!this.state.sticky)
         {
@@ -82,8 +84,8 @@ export class Menu extends React.Component<{}, State> {
             return <li key={item.href} className={classnames('list-inline-item', { active: item.active })}><a href={item.href}>{item.text}</a></li>
         })
 
-        return <section id="menu" onScroll={this.handleScroll}>
-            <nav className={classes} ref={(c) => this.menuDom = c}>
+        return <section id="menu" onScroll={this.handleScroll} ref={c => this.sectionDom = c} >
+            <nav className={classes} ref={c => this.menuDom = c}>
                 <ul className="list-inline">
                     {items}
                 </ul>                 
