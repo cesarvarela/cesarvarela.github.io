@@ -46,7 +46,7 @@ let platforms: SkillItemProps[] =
             name: "Node.js"
         },
         {
-            name: "iOS/Xcode"
+            name: "iOS"
         },
         {
             name: ".NET"
@@ -59,18 +59,43 @@ let platforms: SkillItemProps[] =
         }
     ]
 
+let software: SkillItemProps[] =
+    [
+        {
+            name: "Visual Studio/ VSCode"
+        },
+        {
+            name: "Xcode"
+        },
+        {
+            name: "Photoshop"
+        },
+        {
+            name: "Unity 3D"
+        },
+        {
+            name: "Sketch"
+        },
+        {
+            name: "Chrome DEV tools"
+        }
+    ]
+
 export class About extends React.Component<{}, {}> {
 
     render() {
         return <Section id="about" heading="About" preHeading="'cause everybody has a past" postHeading="Something to say about me! (seems like one of those self-help questions)">
             <div className="skills">
-                <h4>Skills</h4>
+                <h3>Skills</h3>
                 <p>Analysis, design and software development.</p>
-                <h4>Technologies</h4>
+
+                <h3>Technologies</h3>
+                <p>Over the years I've worked on lots of different projects with different requirements and challenges, here is some of the tools that helped me get thorugh them.</p>
+
                 <div className="row">
-                    <div className="col-sm-4">
-                        <b>Languages</b>
-                        <ul className="list">
+                    <div className="col-md-3">
+                        <h4>Languages</h4>
+                        <ul>
                             {
                                 languages.map((item) => {
                                     return <SkillItem name={item.name} />
@@ -78,8 +103,8 @@ export class About extends React.Component<{}, {}> {
                             }
                         </ul>
                     </div>
-                    <div className="col-sm-4">
-                        <b>Frameworks/Libraries</b>
+                    <div className="col-md-3">
+                        <h4>Frameworks/Libraries</h4>
                         <ul>
                             {
                                 frameworks.map((item) => {
@@ -88,11 +113,21 @@ export class About extends React.Component<{}, {}> {
                             }
                         </ul>
                     </div>
-                    <div className="col-sm-4">
-                        <b>Stacks/Platforms</b>
+                    <div className="col-md-3">
+                        <h4>Stacks/Platforms</h4>
                         <ul>
                             {
                                 platforms.map((item) => {
+                                    return <SkillItem name={item.name} />
+                                })
+                            }
+                        </ul>
+                    </div>
+                    <div className="col-md-3">
+                        <h4>Software</h4>
+                        <ul>
+                            {
+                                software.map((item) => {
                                     return <SkillItem name={item.name} />
                                 })
                             }

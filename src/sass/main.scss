@@ -166,16 +166,16 @@ section
   {
     padding-top: 30px;
     padding-bottom: 30px;
-    color: #DBDBDB;
-    b
+    color: $text-light;
+
+    h4, h3
     {
-      color: #fff;
-    }
-    h4
-    {
-      color: #fff;
-      font-family: 'Montserrat', sans-serif;
+      font-family: $title-font;
       text-transform: uppercase;
+    }
+
+    p {
+      color: darken($text-light, 20%);
     }
   }
 }
@@ -324,6 +324,23 @@ section#contact
 
 section#about
 {
+  h3 {
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: .8rem;
+    margin: 40px 0 0 0;
+  }
+
+  ul {
+    margin: 10px 0 0 0;
+    list-style-type: none;
+    padding: 0;
+    li {
+      color: darken($text-light, 20%);
+    }
+  }
    
 }
 
