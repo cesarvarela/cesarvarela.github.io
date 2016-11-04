@@ -301,23 +301,13 @@ section#menu
 
 section#contact
 {
-  .content-inner
+  .container
   {
-    text-align: center;
-
-    ul
-    {
-      list-style: none;
+    h5 {
+      margin-top: 1rem;
     }
-
-    .vCard p
-    {
-      margin: 20px;
-    }
-
-    .vias
-    {
-      margin: 10px;
+    img {
+      height: 230px;
     }
   }
 }
