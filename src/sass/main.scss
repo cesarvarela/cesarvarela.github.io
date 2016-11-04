@@ -192,8 +192,6 @@ section
   }
 }
 
-/* item */
-
 .item
 {
   margin: 35px 0 0 0;
@@ -361,16 +359,12 @@ section#social
   }
 }
 
-/* menu */
-
 section#menu
 {
   background: $background-light;
   margin: 40px 0 40px;
 }
 
-
-/* contact */
 
 section#contact
 {
@@ -394,8 +388,6 @@ section#contact
     }
   }
 }
-
-/* about */
 
 section#about
 {
@@ -452,8 +444,6 @@ section#about
       }
     }
 }
-
-/* footer */
 
 footer
 {
@@ -528,8 +518,6 @@ footer
   }
 }
 
-/* footer */
-
 footer
 {
   text-align: center;
@@ -537,15 +525,4 @@ footer
   {
     font-size: 12px;
   }
-}
-
-
-
-// syntax hightlighting
-
-.highlight
-{
-  background: #000;
-  border: 1px solid #ccc;
-  padding: 10px;
 }

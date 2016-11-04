@@ -24,6 +24,6 @@ export class Contact extends React.Component<{}, {}> {
 						</li>
 					</ul>
 				</div>
-		</section>
+		</Section>
 	}
 }
