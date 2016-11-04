@@ -5,10 +5,12 @@ $breakpoints: $grid-breakpoints;
 $link-color: #CC1100;
 $title-font: 'Montserrat', sans-serif;
 $paragraph-font: lato, sans-serif;
+
 $background-light: #fff;
 $background-dark: #333;
-$font-color: #eaeaea;
+
 $text-dark: #333;
+$text-light: #eaeaea;
 
 @mixin float
 {
@@ -340,6 +342,24 @@ section#head
   }
 }
 
+section#social 
+{
+  .list-inline {
+    margin: 40px auto;
+    text-align: center;
+    .list-inline-item {
+      margin: 0;
+      padding: 0 20px;
+      a {
+        text-decoration: none;
+        color: $background-light;
+        i {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+}
 
 /* menu */
 
