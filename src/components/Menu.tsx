@@ -28,10 +28,10 @@ export class Menu extends React.Component<{}, State> {
                 sticky: false,
                 menu:
                 [
-                    { text: 'Games', href: '#games', active: false },
-                    { text: 'Apps', href: '#apps', active: false },
-                    { text: 'Contact', href: '#contact', active: false },
-                    { text: 'About', href: '#about', active: false }
+                    { text: 'Projects', href: '#projects', active: false },
+                    { text: 'About', href: '#about', active: false },
+                    { text: 'Social', href: '#social', active: false },
+                    { text: 'Contact', href: '#contact', active: false },                    
                 ]
             }
     }

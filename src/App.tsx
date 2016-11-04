@@ -4,7 +4,7 @@ import { Menu } from './components/Menu'
 import { Contact } from './components/Contact'
 import { About } from './components/About'
 import { Footer } from './components/Footer'
-import { SocialList, SocialItemProps } from './components/Social'
+import { Social, SocialItemProps } from './components/Social'
 import { ProjectItemProps, Projects } from './components/Projects'
 
 let socialItems: SocialItemProps[] =
@@ -60,12 +60,12 @@ export class App extends React.Component<{}, {}> {
         return <div>
             <Header />
             <hr className="dot" />
-            <Projects items={projectItems} />
-            <SocialList items={socialItems} />
             <Menu />
             <hr className="dot" />
-            <Contact />
+            <Projects items={projectItems} />
             <About />
+            <Social items={socialItems} />            
+            <Contact />
             <Footer />
         </div>
     }

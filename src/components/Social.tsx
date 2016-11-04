@@ -12,7 +12,7 @@ interface SocialProps {
     items: SocialItemProps[]
 }
 
-export class SocialList extends React.Component<SocialProps, {}> {
+export class Social extends React.Component<SocialProps, {}> {
 
     render() {
         return <Section id="social" heading="socialize with me">
