@@ -54,18 +54,6 @@ a
   }
 }
 
-a[target="_blank"]
-{
-  &:after
-  {
-    content: '\e803';
-    font-family: "fontello";
-    font-size: 70%;
-    margin: 0 0 0 5px;
-    vertical-align: super;
-  }
-}
-
 hr.dot
 {
   background: url("../img/hr-dot.png") center no-repeat;
@@ -357,6 +345,23 @@ section#social
       }
     }
   }
+}
+
+section#projects {
+  background: $background-light;
+  .container {
+    color: $text-dark;
+    
+    .row div {
+      .image {
+        text-align: center;
+        line-height: 200px;
+        img {
+        }
+      }
+    }
+  }
+  
 }
 
 section#menu
