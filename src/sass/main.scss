@@ -1,29 +1,18 @@
+$link-color: #CC1100;
+$link-hover-decoration: none;
 @import "node_modules/bootstrap/scss/bootstrap.scss";
+
 $breakpoints: $grid-breakpoints;
 @import "node_modules/include-media/dist/include-media";
 
-$link-color: #CC1100;
 $title-font: 'Montserrat', sans-serif;
 $paragraph-font: lato, sans-serif;
 
 $background-light: #fff;
-$background-dark: #333;
+$background-dark: #000;
 
 $text-dark: #333;
 $text-light: #eaeaea;
-
-@mixin float
-{
-  display: inline-block;
-  @include transition(transform, 0.3s);
-  @include transform(translateZ(0));
-  @include box-shadow(0 0 1px rgba(0, 0, 0, 0));
-
-  &:hover
-  {
-    @include transform(translateY(-5px));
-  }
-}
 
 @mixin title-font
 {
@@ -32,26 +21,10 @@ $text-light: #eaeaea;
   text-align: center;
 }
 
-@mixin paragraph-font
-{
-  font-family: $paragraph-font;
-}
-
 body
 {
   font-family: lato, sans-serif;
   color: #333;
-}
-
-a
-{
-  color: $link-color;
-  text-decoration: none;
-
-  &:hover, a:focus
-  {    
-    color: darken($link-color, 40%);
-  }
 }
 
 hr.dot
@@ -60,17 +33,6 @@ hr.dot
   height: 10px;
   border: none;
   margin: 20px 0 0 0;
-}
-
-.clearfix:before, .clearfix:after
-{
-  content: "";
-  display: table;
-}
-
-.clearfix:after
-{
-  clear: both;
 }
 
 nav.main
@@ -89,10 +51,6 @@ nav.main
     {
       font-size: 1rem;
       padding: 10px 5px;      
-      a
-      {
-        color: #111;
-      }
     }
   }
 
@@ -220,6 +178,7 @@ section#head
     text-align: center;
     line-height: 35px;
     margin:  0 auto;
+    color: $text-dark;
 
     @include media(">md") {
       max-width: 600px; 
@@ -259,14 +218,12 @@ section#head
 section#social 
 {
   .list-inline {
-    margin: 40px auto;
     text-align: center;
     .list-inline-item {
       margin: 0;
-      padding: 0 20px;
+      padding: 30px;
       a {
-        text-decoration: none;
-        color: $background-light;
+        /*color: $background-light;*/
         i {
           font-size: 4rem;
         }
@@ -286,6 +243,9 @@ section#projects {
         line-height: 200px;
         img {
         }
+      }
+      p {
+        color: $text-dark;
       }
     }
   }
@@ -336,32 +296,6 @@ section#about
 
 footer
 {
-  .copy
-  {
-    background: none repeat scroll 0 0 #484848;
-    color: #FFFFFF;
-    font-size: .9em;
-    padding: 40px;
-    margin: 50px 0 0;
-  }
-
-  .validhtml
-  {
-    width: 90%;
-    margin: 20px auto;
-
-    a, p
-    {
-      display: inline-block;
-    }
-  }
-}
-
-footer
-{
   text-align: center;
-  p
-  {
-    font-size: 12px;
-  }
+  margin: 50px auto 20px;
 }
