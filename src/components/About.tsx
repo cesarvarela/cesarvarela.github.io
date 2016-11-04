@@ -100,10 +100,6 @@ export class About extends React.Component<{}, {}> {
                     </div>
                 </div>
             </div>
-
-            <div className="socialize">
-                <h4>Socialize with me</h4>
-            </div>
         </Section>
     }
 }
