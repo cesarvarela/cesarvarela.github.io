@@ -34,6 +34,11 @@ let socialItems: SocialItemProps[] =
             description: 'Facebook',
             link: 'https://www.facebook.com/elcesarpo'
         },
+        {
+            key: 'twitter',
+            description: 'Twitter',
+            link: 'https://twitter.com/cesarpo'
+        },
     ]
 
 
