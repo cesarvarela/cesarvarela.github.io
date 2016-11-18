@@ -6,6 +6,7 @@ import { About } from './components/About'
 import { Footer } from './components/Footer'
 import { Social, SocialItemProps } from './components/Social'
 import { ProjectItemProps, Projects } from './components/Projects'
+import { Works, WorkItemProps } from './components/Works'
 
 let socialItems: SocialItemProps[] =
     [
@@ -60,6 +61,29 @@ let projectItems: ProjectItemProps[] =
         }
     ]
 
+
+let works: WorkItemProps[] =
+    [
+        {
+            img: "./thumb-kavachess.png",
+            title: "Kava Chess",
+            description: "Concept, design (graphics and gameplay), and development.",
+            link: "https://itunes.apple.com/us/app/kava-chess/id1143682673"
+        },
+        {
+            img: "./thumb-stealthy.png",
+            title: "Stealhty - Work in progress",
+            description: "Concept, design (graphics and gameplay), and development.",
+            link: "https://poandthemachines.com/stealthy/"
+        },
+        {
+            img: "./thumb-totems.png",
+            title: "The day of the Totems",
+            description: "Concept, design (graphics and gameplay), and development.",
+            link: "https://poandthemachines.com/thedayofthetotems/"
+        },
+    ]
+
 export class App extends React.Component<{}, {}> {
     render() {
         return <div>
@@ -68,8 +92,9 @@ export class App extends React.Component<{}, {}> {
             <Menu />
             <hr className="dot" />
             <Projects items={projectItems} />
+            <Works items={works} />
             <About />
-            <Social items={socialItems} />            
+            <Social items={socialItems} />
             <Contact />
             <Footer />
         </div>
