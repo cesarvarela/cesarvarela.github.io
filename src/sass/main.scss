@@ -120,12 +120,25 @@ nav.main
     transform: translate(-50%, -50%);
   }
 
+  .sorry
+  {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: $text-light;
+    a
+    {
+      color: $text-light;
+    }
+  }
+
   .hide {
     color: #fff;
     font-size: 50px;
-    top: 100px;
+    top: 10%;
+    right: 10%;
     position: absolute;
-    right: 100px;
     cursor: pointer;
   }
 }

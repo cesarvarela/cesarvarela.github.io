@@ -19,6 +19,7 @@
     "@types/webpack-env": "^1.12.1",
     "bootstrap": "^4.0.0-alpha.5",
     "classnames": "^2.2.5",
+    "flashdetect": "^1.0.0",
     "font-awesome": "^4.7.0",
     "hover.css": "^2.0.2",
     "include-media": "^1.4.8",
