@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "$(npm bin)/webpack-dev-server",
+    "dev": "$(npm bin)/webpack-dev-server --display-error-details",
     "build": "$(npm bin)/webpack",
     "deploy": "$(npm bin)/gh-pages -d dist -b master"
   },
@@ -24,9 +24,12 @@
     "include-media": "^1.4.8",
     "jquery": "^3.1.1",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-swf": "^1.0.6"
   },
   "devDependencies": {
+    "@ryancavanaugh/react-swf": "^3.0.12-alpha",
+    "@types/react-swf": "0.0.29",
     "css-loader": "^0.25.0",
     "gh-pages": "^0.11.0",
     "node-sass": "^3.10.1",
