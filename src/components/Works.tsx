@@ -15,7 +15,8 @@ export interface WorkItemProps {
 	img?: string,
 	description?: string,
 	link?: string,
-	linkDescription?: string
+	linkDescription?: string,
+	external?: boolean
 }
 
 export class Works extends React.Component<WorksProps, {}> {
@@ -42,7 +43,14 @@ export class Works extends React.Component<WorksProps, {}> {
 						<div className="media-body">
 							<h4 className="media-heading">{item.title}</h4>
 							{item.description}
-							<h5><a href={item.link} target="_blank">{item.linkDescription ? item.linkDescription : "more"}</a></h5>
+							<h5>
+							<a href={item.link} target="_blank" onClick={e => this.itemClick(e, item)}>
+								{item.linkDescription ? item.linkDescription : "view more"}
+								{item.external &&
+									<i className="fa fa-external-link-square" aria-hidden="true"></i>
+								}								
+							</a>
+							</h5>
 						</div>
 					</li>
 				})}

@@ -23,6 +23,25 @@ $text-light: #eaeaea;
   text-align: center;
 }
 
+.media 
+{
+  h5 
+  {
+    margin-top: 1rem;
+    a
+    {       
+      color: $text-light;
+      i
+      {
+        padding-left: 10px;
+      }
+    }
+  }
+  
+}
+
+
+
 body
 {
   font-family: lato, sans-serif;
@@ -59,7 +78,7 @@ nav.main
   &.sticky
   {
     position: fixed;
-    z-index: 9999;
+    z-index: 5;
     width: 100%;
     top: 0;
     background: $background-dark;

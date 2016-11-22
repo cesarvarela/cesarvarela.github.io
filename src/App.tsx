@@ -70,43 +70,50 @@ let works: WorkItemProps[] =
             img: "./thumb-kavachess.png",
             title: "Kava Chess",
             description: "Concept, design (graphics and gameplay), and development.",
-            link: "https://itunes.apple.com/us/app/kava-chess/id1143682673"
+            link: "https://itunes.apple.com/us/app/kava-chess/id1143682673",
+            external: true
         },
         {
             img: "./thumb-stealthy.png",
             title: "Stealhty - Work in progress",
             description: "Concept, design (graphics and gameplay), and development.",
-            link: "https://poandthemachines.com/stealthy/"
+            link: "https://poandthemachines.com/stealthy/",
+            external: true
         },
         {
             img: "./thumb-totems.png",
             title: "The day of the Totems",
             description: "Concept, design (graphics and gameplay), and development.",
-            link: "https://poandthemachines.com/thedayofthetotems/"
+            link: "https://poandthemachines.com/thedayofthetotems/",
+            external: true
         },
         {
             img: "./thumb-beetubes.png",
             title: "Beetubes",
             description: "Concept, design (graphics and gameplay), and development.",
-            link: "./beetubes.swf"
+            link: "./beetubes.swf",
+            linkDescription: 'play now!'
         },
         {
             img: "./thumb-eggs.png",
             title: "Eggs",
             description: "Concept, design (graphics and gameplay), and development.",
-            link: "./eggs.swf"
+            link: "./eggs.swf",
+            linkDescription: 'play now!'
         },
         {
             img: "./thumb-feed-my-flytrap.png",
             title: "Feed my flytrap",
             description: "Concept, design (graphics and gameplay), and development.",
-            link: "./feedmyflytrap.swf"
+            link: "./feedmyflytrap.swf",
+            linkDescription: 'play now!'
         },
         {
             img: "./thumb-burpycat.png",
             title: "Burpycat",
             description: "Concept, design (graphics and gameplay), and development.",
-            link: "./burpycat.swf"
+            link: "./burpycat.swf",
+            linkDescription: 'play now!'
         }
     ]
 
