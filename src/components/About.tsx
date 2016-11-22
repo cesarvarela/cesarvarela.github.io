@@ -136,7 +136,9 @@ export class About extends React.Component<{}, {}> {
                 </div>
             </div>
 
-            <h3 className="cv"><a target="_blank" href="https://drive.google.com/open?id=0B3EQ8J3Xt_eqTlo4QnI5cy0wSlE">You can also download my CV here <i className="fa fa-arrow-circle-down" aria-hidden="true"></i></a></h3>
+            <h3 className="cv"><a target="_blank" href="https://drive.google.com/file/d/0B3EQ8J3Xt_eqOTl2XzB4bUg4T1E/view?usp=sharing">
+                You can also download my CV here <i className="fa fa-arrow-circle-down" aria-hidden="true"></i></a>
+            </h3>
         </Section>
     }
 }
