@@ -83,6 +83,34 @@ nav.main
   }
 }
 
+
+.lightbox {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  z-index: 10;
+  top: 0;
+  .content {
+    width: 700px;
+    height: 400px;
+    background: #fff;
+    position: fixed;    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hide {
+    color: #fff;
+    font-size: 50px;
+    top: 100px;
+    position: absolute;
+    right: 100px;
+    cursor: pointer;
+  }
+}
+
 section
 {
   background: #000;
@@ -139,7 +167,6 @@ section
     }
   }
 }
-
 
 section#head
 {  

@@ -7,6 +7,8 @@ import { Footer } from './components/Footer'
 import { Social, SocialItemProps } from './components/Social'
 import { ProjectItemProps, Projects } from './components/Projects'
 import { Works, WorkItemProps } from './components/Works'
+import { Flash } from './components/flash'
+import { Lightbox } from './components/Lightbox'
 
 let socialItems: SocialItemProps[] =
     [
@@ -82,9 +84,41 @@ let works: WorkItemProps[] =
             description: "Concept, design (graphics and gameplay), and development.",
             link: "https://poandthemachines.com/thedayofthetotems/"
         },
+        {
+            img: "./thumb-beetubes.png",
+            title: "Beetubes",
+            description: "Concept, design (graphics and gameplay), and development.",
+            link: "./beetubes.swf"
+        },
+        {
+            img: "./thumb-eggs.png",
+            title: "Eggs",
+            description: "Concept, design (graphics and gameplay), and development.",
+            link: "./eggs.swf"
+        },
+        {
+            img: "./thumb-feed-my-flytrap.png",
+            title: "Feed my flytrap",
+            description: "Concept, design (graphics and gameplay), and development.",
+            link: "./feedmyflytrap.swf"
+        },
+        {
+            img: "./thumb-burpycat.png",
+            title: "Burpycat",
+            description: "Concept, design (graphics and gameplay), and development.",
+            link: "./burpycat.swf"
+        }
     ]
 
 export class App extends React.Component<{}, {}> {
+
+    lightbox: Lightbox;
+
+    showInLightbox(src: string) {
+
+        this.lightbox.show(src)
+    }
+
     render() {
         return <div>
             <Header />
@@ -92,11 +126,12 @@ export class App extends React.Component<{}, {}> {
             <Menu />
             <hr className="dot" />
             <Projects items={projectItems} />
-            <Works items={works} />
+            <Works items={works} lightboxCallback={this.showInLightbox.bind(this)} />
             <About />
             <Social items={socialItems} />
             <Contact />
             <Footer />
+            <Lightbox ref={r => this.lightbox = r} />
         </div>
     }
 }
