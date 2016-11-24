@@ -25,6 +25,27 @@ $text-light: #eaeaea;
 
 .media 
 {
+  //So much for mobile first >_<
+  @include media("<md") {
+    & > a {
+      display: block;
+    }
+    .media-body
+    {
+      display: block;
+      width: auto;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    img {
+        margin: 0 auto;
+    }
+  }
+
+  .media-left {
+    padding-right: 2rem;
+  }
+
   h5 
   {
     margin-top: 1rem;
