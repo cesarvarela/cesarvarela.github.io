@@ -129,7 +129,7 @@ export class App extends React.Component<{}, {}> {
     render() {
         return <div>
             <Header />
-            <hr className="dot" />
+            <hr className="dot hidden-md-down" />
             <Menu />
             <hr className="dot" />
             <Projects items={projectItems} />

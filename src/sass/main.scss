@@ -91,8 +91,11 @@ nav.main
     margin: 0;
     li
     {
-      font-size: 1rem;
-      padding: 10px 5px;      
+      font-size: 1.2rem;
+      padding: 10px 20px;     
+      a {
+        color: $text-dark;
+      } 
     }
   }
 
@@ -108,7 +111,7 @@ nav.main
 
     ul li a
     {
-      color: #fafafa;
+      color: $text-light;
       transition: color 0.2s ease-out;
     }
 

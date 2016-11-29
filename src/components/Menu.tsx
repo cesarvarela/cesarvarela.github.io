@@ -84,7 +84,7 @@ export class Menu extends React.Component<{}, State> {
             return <li key={item.href} className={classnames('list-inline-item', { active: item.active })}><a href={item.href}>{item.text}</a></li>
         })
 
-        return <section id="menu" onScroll={this.handleScroll} ref={c => this.sectionDom = c} >
+        return <section id="menu" onScroll={this.handleScroll} ref={c => this.sectionDom = c} className="hidden-md-down" >
             <nav className={classes} ref={c => this.menuDom = c}>
                 <ul className="list-inline">
                     {items}
