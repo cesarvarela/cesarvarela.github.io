@@ -131,10 +131,10 @@ export class App extends React.Component<{}, {}> {
             <Header />
             <hr className="dot hidden-md-down" />
             <Menu />
-            <hr className="dot" />
-            <Projects items={projectItems} />
+            <hr className="dot" />            
             <Works items={works} lightboxCallback={this.showInLightbox.bind(this)} />
             <About />
+            <Projects items={projectItems} />
             <Social items={socialItems} />
             <Contact />
             <Footer />
