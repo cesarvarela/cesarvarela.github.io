@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Header } from './components/Header'
 import { Menu } from './components/Menu'
 import { Contact } from './components/Contact'
-import { About } from './components/About'
+import { About, SkillList } from './components/About'
 import { Footer } from './components/Footer'
 import { Social, SocialItemProps } from './components/Social'
 import { ProjectItemProps, Projects } from './components/Projects'
@@ -44,7 +44,6 @@ let socialItems: SocialItemProps[] =
         },
     ]
 
-
 let projectItems: ProjectItemProps[] =
     [
         {
@@ -62,7 +61,6 @@ let projectItems: ProjectItemProps[] =
             description: `A chatbots development studio I've started along with some friends. Need a chatbot? Don't hesitate and talk with us!`,
         }
     ]
-
 
 let works: WorkItemProps[] =
     [
@@ -117,6 +115,98 @@ let works: WorkItemProps[] =
         }
     ]
 
+let skills: SkillList[] =
+    [
+        {
+            name: "Languages",
+            items:
+            [
+                {
+                    name: "Javascript"
+                },
+                {
+                    name: "Typescript"
+                },
+                {
+                    name: "Swift"
+                },
+                {
+                    name: "C#"
+                },
+                {
+                    name: "ActionScript 3"
+                },
+                {
+                    name: "PHP"
+                },
+                {
+                    name: "GO"
+                },
+            ]
+        },
+        {
+            name: "FRAMEWORKS/LIBRARIES",
+            items:
+            [
+                {
+                    name: "React"
+                },
+                {
+                    name: "Angular"
+                },
+                {
+                    name: "Express"
+                },
+            ]
+        },
+
+        {
+            name: "STACKS/PLATFORMS",
+            items:
+            [
+                {
+                    name: "Node.js"
+                },
+                {
+                    name: "iOS"
+                },
+                {
+                    name: ".NET"
+                },
+                {
+                    name: "Unity 3D"
+                },
+                {
+                    name: "LAMP"
+                }
+            ]
+        },
+        {
+            name: "SOFTWARE",
+            items:
+            [
+                {
+                    name: "Visual Studio/ VSCode"
+                },
+                {
+                    name: "Xcode"
+                },
+                {
+                    name: "Photoshop"
+                },
+                {
+                    name: "Unity 3D"
+                },
+                {
+                    name: "Sketch"
+                },
+                {
+                    name: "Chrome DEV tools"
+                }
+            ]
+        }
+    ]
+
 export class App extends React.Component<{}, {}> {
 
     lightbox: Lightbox;
@@ -131,9 +221,9 @@ export class App extends React.Component<{}, {}> {
             <Header />
             <hr className="dot hidden-md-down" />
             <Menu />
-            <hr className="dot" />            
+            <hr className="dot" />
             <Works items={works} lightboxCallback={this.showInLightbox.bind(this)} />
-            <About />
+            <About skills={skills} />
             <Projects items={projectItems} />
             <Social items={socialItems} />
             <Contact />
