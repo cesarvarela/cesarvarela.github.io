@@ -97,8 +97,8 @@ export class About extends React.Component<{}, {}> {
                         <h4>Languages</h4>
                         <ul>
                             {
-                                languages.map((item) => {
-                                    return <SkillItem name={item.name} />
+                                languages.map((item, index) => {
+                                    return <SkillItem name={item.name} key={index} />
                                 })
                             }
                         </ul>

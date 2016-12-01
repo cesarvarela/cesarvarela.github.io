@@ -35,7 +35,7 @@ export class Works extends React.Component<WorksProps, {}> {
 		return <Section id="games" preHeading="" heading="My Works" postHeading="Stuff I've worked on over the years ">
 			<ul className="media-list">
 				{this.props.items.map((item, index) => {
-					return <li className="media mt-3">
+					return <li className="media mt-3" key={index}>
 						<a className="media-left" href={item.link} target="_blank" onClick={e => this.itemClick(e, item)}>
 							<img className="media-object rounded" src={context<string>(item.img)} />
 						</a>
