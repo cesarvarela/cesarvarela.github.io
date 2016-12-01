@@ -7,4 +7,4 @@ require('../node_modules/font-awesome/scss/font-awesome.scss')
 require("./sass/main.scss")
 
 
-ReactDOM.render(<App />, document.getElementById("example"));
+ReactDOM.render(<App />, document.getElementById("main"));
