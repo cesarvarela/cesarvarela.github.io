@@ -1,14 +1,6 @@
-import * as React from 'react'
+import React from 'react'
 
-interface SectionProps 
-{
-    id:string,
-    preHeading?:string,
-    heading?:string,
-    postHeading?:string,
-}
-
-export class Section extends React.Component<SectionProps, {}> {
+export class Section extends React.Component {
 
     render() {
 

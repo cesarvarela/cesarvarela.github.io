@@ -1,27 +1,12 @@
-import * as React from 'react'
+import React from 'react'
 import { Section } from './Section'
 
 
 let context = require.context("../img/thumbs", true, /^\.\/.*\.png$/)
 
+export class Works extends React.Component {
 
-export interface WorksProps {
-	items: WorkItemProps[];
-	lightboxCallback?:(item:string) => void;
-}
-
-export interface WorkItemProps {
-	title?: string,
-	img?: string,
-	description?: string,
-	link?: string,
-	linkDescription?: string,
-	external?: boolean
-}
-
-export class Works extends React.Component<WorksProps, {}> {
-
-	itemClick(e:React.MouseEvent<HTMLAnchorElement>, item:WorkItemProps) 
+	itemClick(e, item) 
 	{
 		if(item.link.indexOf('swf') > -1)
 		{
@@ -32,12 +17,12 @@ export class Works extends React.Component<WorksProps, {}> {
 
 	render() {
 
-		return <Section id="games" preHeading="" heading="My Works" postHeading="Stuff I've worked on over the years ">
+		return <Section id="games" preHeading="" heading="Works" postHeading="Stuff I've worked on over the years ">
 			<ul className="media-list">
 				{this.props.items.map((item, index) => {
 					return <li className="media mt-3" key={index}>
 						<a className="media-left" href={item.link} target="_blank" onClick={e => this.itemClick(e, item)}>
-							<img className="media-object rounded" src={context<string>(item.img)} />
+							<img className="media-object rounded" src={context(item.img)} />
 						</a>
 
 						<div className="media-body">

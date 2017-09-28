@@ -1,3 +1,5 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
 @import "node_modules/hover.css/scss/hover.scss";
 
 $link-color: #CC1100;
@@ -329,10 +331,11 @@ section#projects {
     color: $text-dark;
 
     .row div {
+      text-align: center;
       .image {
-        text-align: center;
         line-height: 200px;
         img {
+          max-width: 80%;
         }
       }
       p {

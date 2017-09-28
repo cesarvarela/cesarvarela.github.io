@@ -1,25 +1,14 @@
-import * as React from 'react'
-import * as $ from 'jquery'
-import * as classnames from 'classnames'
+import React from 'react'
+import $ from 'jquery'
+import classnames from 'classnames'
 
-interface MenuItem {
-    text: string;
-    href: string;
-    active: boolean;
-}
+export class Menu extends React.Component {
 
-interface State {
-    sticky?: boolean;
-    menu?: MenuItem[];
-}
-
-export class Menu extends React.Component<{}, State> {
-
-    sectionDom: HTMLElement;
-    menuDom: HTMLElement;
-    menuTop: number;
-    menuHeight: number;
-    windowTop: number;
+    sectionDom;
+    menuDom;
+    menuTop;
+    menuHeight;
+    windowTop;
 
     constructor() {
         super()
@@ -62,7 +51,7 @@ export class Menu extends React.Component<{}, State> {
             this.setState({ sticky: false })
         }
 
-        let last: MenuItem;
+        let last;
 
         this.state.menu.forEach((item) => {
             if (this.windowTop + this.menuHeight > $(item.href).offset().top) {

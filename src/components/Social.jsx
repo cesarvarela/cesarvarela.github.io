@@ -1,18 +1,8 @@
-import * as React from 'react'
-import * as classnames from 'classnames'
+import React from 'react'
+import classnames from 'classnames'
 import { Section } from './Section'
 
-export interface SocialItemProps {
-    key: string,
-    description: string,
-    link: string
-}
-
-interface SocialProps {
-    items: SocialItemProps[]
-}
-
-export class Social extends React.Component<SocialProps, {}> {
+export class Social extends React.Component {
 
     render() {
         return <Section id="social" heading="socialize with me">

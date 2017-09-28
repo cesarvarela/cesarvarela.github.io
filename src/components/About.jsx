@@ -1,17 +1,8 @@
-import * as React from 'react'
+import React from 'react'
 import { SkillItem, SkillItemProps } from './SkillItem'
 import { Section } from './Section'
 
-export interface AboutProps {
-    skills: SkillList[];
-}
-
-export interface SkillList {
-    name: string;
-    items: SkillItemProps[];
-}
-
-export class About extends React.Component<AboutProps, {}> {
+export class About extends React.Component {
 
     render() {
         return <Section id="about" heading="About" preHeading="'cause everybody has a past" postHeading="Something to say about me! (seems like one of those self-help questions)">
