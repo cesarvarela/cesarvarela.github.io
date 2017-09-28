@@ -36,7 +36,7 @@ let socialItems =
     {
       key: 'facebook',
       description: 'Facebook',
-      link: 'https://www.facebook.com/elcesarpo'
+      link: 'https://www.facebook.com/cesarluis.varela'
     },
     {
       key: 'twitter',
